@@ -4,7 +4,7 @@
 The simple lottery will be nonrecurring, uses blockhashes for random numbers, and has only one winner. <br>
 
 ** Design Process: ** <br>
-![alt text] https://github.com/cmiasmalbas/lottery/blob/master/SimpleLottery.png
+![alt text] (https://github.com/cmiasmalbas/lottery/blob/master/SimpleLottery.png)
 
 + Open the browser and go to remix.ethereum.org 
 + Copy the contract from SimpleLottery.sol in the remix
