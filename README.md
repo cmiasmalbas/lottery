@@ -6,6 +6,7 @@ The simple lottery will be nonrecurring, uses blockhashes for random numbers, an
 **Design Process:** <br>
 ![alt text](https://github.com/cmiasmalbas/lottery/blob/master/SimpleLottery.png)
 
+**Instruction:**
 + Open the browser and go to remix.ethereum.org 
 + Copy the contract from SimpleLottery.sol in the remix
 + The admin will initiate the contract
@@ -30,6 +31,7 @@ This lottery will occur in rounds so that a new prize pool is started every time
 **Design Process:** <br>
 ![alt text](https://github.com/cmiasmalbas/lottery/blob/master/RecurringLottery.png)
 
+**Instruction:**
 + Open the browser and go to remix.ethereum.org 
 + Copy the contract from SimpleLottery.sol in the remix
 + The admin will initiate the contract
@@ -46,3 +48,27 @@ This lottery will occur in rounds so that a new prize pool is started every time
 + Add 1 to round counts
 + The system will initiate new rounds
 + If the round counts is less than or equal to 100, the system will be deleted 1 round
+
+## RNG Lottery
+This lottery game is or a one time random number. It will be instituting time delays between the ticket purchase period and the drawing of the winner, so that the blockhash used to determine the winner is not known at any point when lottery tickets are being distributed.. <br>
+
+**Design Process:** <br>
+![alt text](https://github.com/cmiasmalbas/lottery/blob/master/RNGLottery.png)
+
+**Instruction:**
++ Open the browser and go to remix.ethereum.org 
++ Copy the contract from SimpleLottery.sol in the remix
++ The admin will initiate the contract
++ Click the Run tab
++ The participant submits commitment hash when buying a tickets
++ CreateCommit function is for the hashing the address with the corresponding the guess number. One number only. Input value for CreateCommit is: "(address)", (guess number).
++ The user will choose what number they want to submit
++ When user submitted their number, system will save the secret number and address to ticketlist in world state
++ When ticketing period is over, user cannot purchased any tickets.
++ When ticketing period is over, All user must reveal their secret number to know who is the winner
++ After revealing, the system will verify whose secret number was the winner
++ If the users failed to submit their numbers and addresses they will drop to Lottery.
++ System will draw the winner and verify if the number is existing.
++ Generate random number, it will enable to select the user’s address to ticketlist. -Generate random seed for picking a winner, this is random seed to determine the winner. Each time a secret number is revealed, the seed is modified to incorporate the reveal.
++ Balance will be added to user’s address and will added to world state to verify the address of the user.
+
