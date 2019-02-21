@@ -72,3 +72,21 @@ This lottery game is or a one time random number. It will be instituting time de
 + Generate random number, it will enable to select the user’s address to ticketlist. -Generate random seed for picking a winner, this is random seed to determine the winner. Each time a secret number is revealed, the seed is modified to incorporate the reveal.
 + Balance will be added to user’s address and will added to world state to verify the address of the user.
 
+## Powerball Lottery
+In this lottery game, the user picks six numbers per ticket. The first five numbers are standard numbers from 1–69, and the sixth number is a special Powerball number from 1–26 that offers extra rewards. Every three or four days, a drawing is held, and a winning ticket consisting of five standard numbers and a Powerball number is picked. Prizes are paid out based on the number of winning numbers matched on your ticket.
+
+**Design Process:** <br>
+![alt text](https://github.com/cmiasmalbas/lottery/blob/master/PowerballLottery.png)
+
+**Instruction:**
++ Open the browser and go to remix.ethereum.org 
++ Copy the contract from SimpleLottery.sol in the remix
++ The admin will initiate the contract
++ Click the Run tab
++ Click the Create button 
++ When buying the tickets, type in this format [[]] For ex. [[1,2,3,4,5,6]]
++ To buy another ticket, just change the address
++ Keep on buying the tickets until there is the error. Error occurs when the duration is in limit.
++ For drawing numbers, put a value in the one(1) for the round number.
++ To view the winning numbers, put a value of one in the winningNumbersfor function button. To see what is the winning numbers.
++ If there is a match in your guess number, claim the prize by the function claim and put one(1) for the round.
