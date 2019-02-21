@@ -26,7 +26,7 @@ The simple lottery will be nonrecurring, uses blockhashes for random numbers, an
 + Click claim for the claiming the prize.
 <br> 
 <br>
-## Recurring Lottery <br>
+## Recurring Lottery
 This lottery will occur in rounds so that a new prize pool is started every time the old one closes. It will also allow users to purchase multiple tickets in one transaction instead of just one and add a couple of security improvements. <br>
 
 **Design Process:** <br>
